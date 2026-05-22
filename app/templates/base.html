@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kalkulator Canggih{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#6366F1',
+                            dark: '#818CF8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <header class="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <a href="/" class="flex items-center space-x-2">
+                        <span class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">Kalkulator</span>
+                        <span class="px-2 py-0.5 text-xs font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300 rounded-full">Pro</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/arithmetic" class="text-sm font-medium transition-colors {% if request.path == '/arithmetic' %}text-indigo-600 dark:text-indigo-400{% else %}text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white{% endif %}">Aritmatika</a>
+                    <a href="/logic" class="text-sm font-medium transition-colors {% if request.path == '/logic' %}text-indigo-600 dark:text-indigo-400{% else %}text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white{% endif %}">Logika</a>
+                    <a href="/transform" class="text-sm font-medium transition-colors {% if request.path == '/transform' %}text-indigo-600 dark:text-indigo-400{% else %}text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white{% endif %}">Transformasi</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg transition-colors">
+                        <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464a1 1 0 101.414-1.414l-.707-.707a1 1 0 10-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2h1a1 1 0 100 2H4z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg md:hidden transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700 px-4 py-2 space-y-1">
+            <a href="/arithmetic" class="block py-2 text-base font-medium rounded-md px-3 {% if request.path == '/arithmetic' %}bg-indigo-50 text-indigo-600 dark:bg-slate-700 dark:text-white{% else %}text-gray-500 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-slate-700{% endif %}">Aritmatika</a>
+            <a href="/logic" class="block py-2 text-base font-medium rounded-md px-3 {% if request.path == '/logic' %}bg-indigo-50 text-indigo-600 dark:bg-slate-700 dark:text-white{% else %}text-gray-500 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-slate-700{% endif %}">Logika</a>
+            <a href="/transform" class="block py-2 text-base font-medium rounded-md px-3 {% if request.path == '/transform' %}bg-indigo-50 text-indigo-600 dark:bg-slate-700 dark:text-white{% else %}text-gray-500 hover:bg-gray-50 dark:text-gray-400 dark:hover:bg-slate-700{% endif %}">Transformasi</a>
+        </div>
+    </header>
+
+    <div class="bg-gray-100 dark:bg-slate-800/50 border-b border-gray-200 dark:border-slate-700 md:hidden overflow-x-auto no-scrollbar scroll-smooth flex whitespace-nowrap">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-8">
+            <a href="/arithmetic" class="py-3 px-1 border-b-2 font-medium text-sm transition-all inline-block {% if request.path == '/arithmetic' %}border-indigo-500 text-indigo-600 dark:text-indigo-400{% else %}border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400{% endif %}">Aritmatika</a>
+            <a href="/logic" class="py-3 px-1 border-b-2 font-medium text-sm transition-all inline-block {% if request.path == '/logic' %}border-indigo-500 text-indigo-600 dark:text-indigo-400{% else %}border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400{% endif %}">Logika</a>
+            <a href="/transform" class="py-3 px-1 border-b-2 font-medium text-sm transition-all inline-block {% if request.path == '/transform' %}border-indigo-500 text-indigo-600 dark:text-indigo-400{% else %}border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400{% endif %}">Transformasi</a>
+        </div>
+    </div>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="mb-6 space-y-4">
+                    {% for category, message in messages %}
+                        <div class="p-4 rounded-lg flex items-center justify-between {% if category == 'error' %}bg-red-50 text-red-800 border-l-4 border-red-500 dark:bg-red-950/30 dark:text-red-300{% else %}bg-green-50 text-green-800 border-l-4 border-green-500 dark:bg-green-950/30 dark:text-green-300{% endif %}" role="alert">
+                            <div class="flex items-center space-x-2">
+                                {% if category == 'error' %}
+                                    <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                                {% else %}
+                                    <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                {% endif %}
+                                <span class="text-sm font-medium">{{ message }}</span>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors" onclick="this.parentElement.remove()">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-white dark:bg-slate-800 border-t border-gray-200 dark:border-slate-700 py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
+            &copy; 2026 Kalkulator Canggih Pro. Dibuat dengan Flask & Tailwind CSS.
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
