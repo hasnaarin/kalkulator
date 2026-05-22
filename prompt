@@ -1,0 +1,234 @@
+Buatkan aplikasi web Kalkulator Canggih menggunakan Python + Flask 
+dengan pendekatan Jinja2 (full page reload, tanpa AJAX). 
+Berikut spesifikasi lengkapnya:
+
+═══════════════════════════════════════
+STACK TEKNIS
+═══════════════════════════════════════
+- Backend  : Python 3.x + Flask
+- Frontend : HTML5 + Tailwind CSS CDN + Vanilla JS (minimal, hanya dark mode)
+- Template : Jinja2
+- Session  : Flask Session (untuk history)
+- No database, no AJAX
+
+═══════════════════════════════════════
+STRUKTUR FOLDER
+═══════════════════════════════════════
+kalkulator/
+├── app/
+│   ├── __init__.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── arithmetic.py
+│   │   ├── logic.py
+│   │   └── transform.py
+│   ├── services/
+│   │   ├── arithmetic.py
+│   │   ├── logic.py
+│   │   └── transform.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── arithmetic.html
+│   │   ├── logic.html
+│   │   └── transform.html
+│   └── static/
+│       ├── css/custom.css
+│       └── js/theme.js
+├── run.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+
+═══════════════════════════════════════
+FITUR WAJIB — DETAIL PER KATEGORI
+═══════════════════════════════════════
+
+[1] OPERASI ARITMATIKA
+Operasi yang didukung:
+- Penjumlahan (+)
+- Pengurangan (-)
+- Perkalian (×)
+- Pembagian (÷) — tampilkan error jika pembagi = 0
+- Pangkat (a^b)
+- Akar kuadrat (√a)
+- Modulus (a % b)
+- Floor Division (a // b)
+
+Output per operasi WAJIB memuat:
+- Hasil akhir
+- Rumus yang digunakan (contoh: "a + b = hasil")
+- Langkah-langkah detail (minimal 3 langkah penjelasan)
+- Disimpan ke history session
+
+[2] OPERATOR LOGIKA
+Input: dua bilangan integer (A dan B) + pilih operator
+Operator: AND, OR, NOT (hanya A), XOR, NAND, NOR
+
+Output WAJIB memuat:
+- Representasi biner dari A dan B
+- Tabel kebenaran mini (truth table 2 baris)
+- Hasil dalam desimal dan biner
+- Penjelasan langkah per bit
+- Disimpan ke history session
+
+[3] TRANSFORMASI BILANGAN
+3a. Konversi Basis
+- Input: angka + basis asal (DEC/BIN/OCT/HEX)
+- Output: konversi ke semua 4 basis sekaligus
+- Tampilkan langkah konversi (pembagian berulang)
+
+3b. Konversi Suhu
+- Input: angka + satuan asal
+- Satuan: Celsius, Fahrenheit, Kelvin, Reamur
+- Output: konversi ke semua 4 satuan sekaligus
+- Tampilkan rumus yang dipakai
+
+3c. Konversi Mata Uang
+- Input: nominal IDR
+- Output: USD, EUR, SGD, MYR, JPY (rate statis, hardcode di service)
+- Tampilkan rate yang digunakan
+
+3d. BONUS: Faktorial & Fibonacci
+- Faktorial: tampilkan langkah perkalian (5! = 5×4×3×2×1 = 120)
+- Fibonacci: tampilkan deret sampai ke-n
+
+═══════════════════════════════════════
+DESAIN UI — MOBILE FIRST
+═══════════════════════════════════════
+
+PRINSIP UTAMA:
+- Mobile First: desain dari layar kecil (375px) lalu scale up ke desktop
+- Gunakan Tailwind CSS CDN
+- Semua layout pakai flexbox atau grid Tailwind
+- Tidak ada horizontal scroll di mobile
+
+LAYOUT MOBILE (< 768px):
+- Navbar: hamburger menu, logo di kiri
+- Konten: 1 kolom penuh (full width)
+- Tombol: full width, min-height 48px (mudah di-tap)
+- Input: full width, font-size minimal 16px (cegah auto-zoom di iOS)
+- History: accordion collapsible (hemat ruang)
+- Tab navigasi kategori: scroll horizontal (overflow-x: auto)
+
+LAYOUT DESKTOP (≥ 768px):
+- Navbar: horizontal menu biasa
+- Konten: 2 kolom — kiri form input, kanan hasil + history
+- Tombol: ukuran normal
+- History: sidebar atau panel kanan
+
+DARK / LIGHT MODE:
+- Toggle button di navbar (ikon matahari/bulan)
+- Simpan preferensi di localStorage
+- Implementasi dengan class "dark" di <html> tag (Tailwind dark mode: class)
+- Default: ikuti sistem (prefers-color-scheme)
+
+COLOR PALETTE:
+Light mode:
+- Background : #F9FAFB (gray-50)
+- Card       : #FFFFFF
+- Primary    : #6366F1 (indigo-500)
+- Text       : #111827 (gray-900)
+
+Dark mode:
+- Background : #0F172A (slate-900)
+- Card       : #1E293B (slate-800)
+- Primary    : #818CF8 (indigo-400)
+- Text       : #F1F5F9 (slate-100)
+
+KOMPONEN UI WAJIB:
+1. base.html
+   - Navbar responsif dengan hamburger (mobile)
+   - Tab menu 3 kategori (Aritmatika / Logika / Transformasi)
+   - Flash message area (untuk error/sukses)
+   - Footer simpel
+
+2. Halaman per kategori
+   - Card form input di atas
+   - Card hasil di bawah (mobile) / di kanan (desktop)
+   - Card history (collapsible di mobile)
+
+3. Tampilan Hasil
+   - Badge warna untuk hasil akhir
+   - Accordion untuk langkah-langkah
+   - Tabel untuk truth table / konversi basis
+
+═══════════════════════════════════════
+LOGIKA BACKEND — SERVICES
+═══════════════════════════════════════
+
+services/arithmetic.py
+- Fungsi per operasi, return dict:
+  {
+    "result": ...,
+    "formula": "a + b = c",
+    "steps": ["Langkah 1: ...", "Langkah 2: ...", "Langkah 3: ..."],
+    "operation": "Penjumlahan"
+  }
+
+services/logic.py
+- Fungsi per operator, return dict:
+  {
+    "result": ...,
+    "result_bin": "...",
+    "a_bin": "...",
+    "b_bin": "...",
+    "truth_table": [...],
+    "steps": [...]
+  }
+
+services/transform.py
+- Fungsi per jenis konversi, return dict sesuai kebutuhan
+- Kurs statis disimpan sebagai konstanta dict di file ini
+
+═══════════════════════════════════════
+FLASK SESSION — HISTORY
+═══════════════════════════════════════
+- Setiap kalkulasi sukses → append ke session["history"]
+- Format history item:
+  {
+    "category": "Aritmatika",
+    "operation": "Penjumlahan",
+    "expression": "5 + 3",
+    "result": "8",
+    "timestamp": "HH:MM:SS"
+  }
+- Maksimal 20 item terakhir (FIFO, hapus yang paling lama)
+- Tombol "Hapus History" tersedia di setiap halaman
+- SECRET_KEY wajib diset di app config
+
+═══════════════════════════════════════
+ROUTES
+═══════════════════════════════════════
+GET  /                    → index.html (landing page)
+GET  /arithmetic          → form aritmatika
+POST /arithmetic          → proses + render hasil
+GET  /logic               → form logika
+POST /logic               → proses + render hasil
+GET  /transform           → form transformasi
+POST /transform           → proses + render hasil
+POST /clear-history       → hapus session history → redirect back
+
+═══════════════════════════════════════
+run.py
+═══════════════════════════════════════
+from app import create_app
+app = create_app()
+if __name__ == "__main__":
+    app.run(debug=True)
+
+═══════════════════════════════════════
+requirements.txt
+═══════════════════════════════════════
+Flask>=3.0.0
+
+═══════════════════════════════════════
+CATATAN TAMBAHAN
+═══════════════════════════════════════
+- Semua error (pembagian 0, input invalid) ditangkap dengan try/except
+  dan dikembalikan via flask flash() → tampil di UI
+- Jangan gunakan eval() untuk kalkulasi — gunakan fungsi Python eksplisit
+- Komentar kode dalam Bahasa Indonesia
+- Setiap file wajib ada docstring singkat di bagian atas
+- README.md wajib berisi: deskripsi, cara install, cara run, 
+  struktur folder, screenshot
