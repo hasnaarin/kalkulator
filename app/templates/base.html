@@ -23,8 +23,87 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
     <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
 </head>
-<body class="bg-[#F8F8F8] text-black dark:bg-[#000000] dark:text-[#F5F5F5] min-h-screen flex flex-col antialiased">
-    <header class="bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
+<body class="bg-gradient-to-tr from-[#F8F8F8] via-[#F2F5F8] to-[#EBF0F5] text-black dark:bg-gradient-to-b dark:from-[#000000] dark:via-[#05050A] dark:to-[#0C0C18] dark:text-[#F5F5F5] min-h-screen flex flex-col antialiased relative">
+    <div class="fixed inset-0 pointer-events-none select-none z-0 overflow-hidden">
+        <div class="absolute inset-0 dark:hidden">
+            <div class="absolute top-10 right-10 md:top-20 md:right-20 text-neutral-200/40 animate-float-slow">
+                <svg class="w-32 h-32 md:w-48 md:h-48" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+            </div>
+            <div class="absolute top-24 left-10 md:top-36 md:left-24 text-neutral-200/50 animate-float-slower">
+                <svg class="w-40 h-40 md:w-56 md:h-56" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+            </div>
+            <div class="absolute bottom-20 right-12 md:bottom-32 md:right-32 text-neutral-200/40 hidden md:block animate-float-slow">
+                <svg class="w-36 h-36" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+            </div>
+            <div class="absolute top-48 right-[25%] text-neutral-300/40 animate-float-slow">
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                </svg>
+            </div>
+            <div class="absolute top-56 right-[22%] text-neutral-300/30 scale-75 animate-float-slower">
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                </svg>
+            </div>
+            <div class="absolute bottom-40 left-16 text-neutral-200/50 animate-float-slow">
+                <svg class="w-16 h-16" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                </svg>
+            </div>
+        </div>
+        <div class="absolute inset-0 hidden dark:block">
+            <div class="absolute top-10 right-10 md:top-20 md:right-20 text-neutral-900/60 animate-float-slow">
+                <svg class="w-32 h-32 md:w-48 md:h-48" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </div>
+            <div class="absolute top-24 left-[15%] text-neutral-800/40 animate-twinkle-1">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
+                </svg>
+            </div>
+            <div class="absolute top-12 left-[45%] text-neutral-800/30 animate-twinkle-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
+                </svg>
+            </div>
+            <div class="absolute top-48 right-[30%] text-neutral-850/50 animate-twinkle-3">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
+                </svg>
+            </div>
+            <div class="absolute bottom-60 right-[15%] text-neutral-900/40 animate-twinkle-1">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
+                </svg>
+            </div>
+            <div class="absolute bottom-36 left-[35%] text-neutral-800/50 animate-twinkle-2">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
+                </svg>
+            </div>
+            <div class="absolute bottom-16 left-8 md:bottom-24 md:left-16 text-neutral-900/60 animate-float-slower">
+                <svg class="w-40 h-40 md:w-56 md:h-56" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
+                    <circle cx="9" cy="11" r="1.5" />
+                    <circle cx="15" cy="11" r="1.5" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 13l-1-1.5h2L12 13z" />
+                    <path stroke-linecap="round" stroke-width="1.5" d="M2 20h20" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 20c-1-2-3-2-4-1 1 2 3 2 4 1z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 20c1-2 3-2 4-1-1 2-3 2-4 1z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <header class="relative z-10 bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -82,7 +161,7 @@
         </div>
     </header>
 
-    <div class="bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 md:hidden overflow-x-auto no-scrollbar scroll-smooth whitespace-nowrap">
+    <div class="relative z-10 bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 md:hidden overflow-x-auto no-scrollbar scroll-smooth whitespace-nowrap">
         <div class="max-w-7xl mx-auto px-4 flex space-x-6 w-max min-w-full">
             <a href="/arithmetic" class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/arithmetic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Aritmatika</a>
             <a href="/logic" class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/logic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Logika</a>
@@ -90,7 +169,7 @@
         </div>
     </div>
 
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 <div class="mb-6 space-y-4">
@@ -116,7 +195,7 @@
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-white dark:bg-[#121212] border-t border-gray-200 dark:border-neutral-800 py-6 mt-auto">
+    <footer class="relative z-10 bg-white dark:bg-[#121212] border-t border-gray-200 dark:border-neutral-800 py-6 mt-auto">
         <div class="max-w-7xl mx-auto px-4 text-center text-[10px] font-bold tracking-widest text-neutral-400 dark:text-neutral-500 uppercase">
             &copy; 2026 Kalkulator NISRINA 
         </div>
