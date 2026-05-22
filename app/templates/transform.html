@@ -6,8 +6,8 @@
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2 space-y-8">
         <div class="bg-white dark:bg-[#121212] rounded-none border border-neutral-200 dark:border-neutral-800 overflow-hidden">
-            <div class="border-b border-neutral-200 dark:border-neutral-800 bg-[#FAFAFA] dark:bg-[#1A1A1A] overflow-x-auto no-scrollbar scroll-smooth flex whitespace-nowrap">
-                <div class="px-4 flex space-x-2">
+            <div class="border-b border-neutral-200 dark:border-neutral-800 bg-[#FAFAFA] dark:bg-[#1A1A1A] overflow-x-auto no-scrollbar scroll-smooth whitespace-nowrap">
+                <div class="px-4 flex space-x-2 w-max min-w-full">
                     <a href="/transform?tab=base" class="py-4 px-4 border-b-2 font-black text-xs uppercase tracking-widest transition-all inline-block {% if active_tab == 'base' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white{% endif %}">Konversi Basis</a>
                     <a href="/transform?tab=temp" class="py-4 px-4 border-b-2 font-black text-xs uppercase tracking-widest transition-all inline-block {% if active_tab == 'temp' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white{% endif %}">Konversi Suhu</a>
                     <a href="/transform?tab=currency" class="py-4 px-4 border-b-2 font-black text-xs uppercase tracking-widest transition-all inline-block {% if active_tab == 'currency' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white{% endif %}">Mata Uang</a>
