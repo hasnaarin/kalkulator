@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Selamat Datang - Kalkulator Canggih Pro{% endblock %}
+
+{% block content %}
+<div class="space-y-12">
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            Kalkulator Canggih Multiguna
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+            Solusi praktis dan interaktif untuk menghitung aritmatika detail, menyelesaikan operasi logika bitwise, serta melakukan berbagai konversi basis bilangan, suhu, dan mata uang dalam satu platform.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 custom-shadow hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-950/50 rounded-xl flex items-center justify-center text-indigo-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Operasi Aritmatika</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Mendukung penjumlahan, pengurangan, perkalian, pembagian, akar, pangkat, modulus, hingga pembagian bulat dengan penjelasan penyelesaian langkah demi langkah secara mendalam.
+                </p>
+            </div>
+            <div class="pt-6">
+                <a href="/arithmetic" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl py-3 text-sm shadow-md transition-colors">
+                    Buka Kalkulator
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 custom-shadow hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-950/50 rounded-xl flex items-center justify-center text-indigo-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Operator Logika</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Evaluasi operasi biner bitwise AND, OR, NOT, XOR, NAND, dan NOR dilengkapi visualisasi representasi biner, tabel kebenaran mini, serta runtunan kalkulasi bit demi bit.
+                </p>
+            </div>
+            <div class="pt-6">
+                <a href="/logic" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl py-3 text-sm shadow-md transition-colors">
+                    Buka Gerbang Logika
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 custom-shadow hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-indigo-50 dark:bg-indigo-950/50 rounded-xl flex items-center justify-center text-indigo-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white">Transformasi & Konversi</h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                    Mengonversi basis angka (DEC, BIN, OCT, HEX), skala suhu (C, F, K, R), kurs mata uang rupiah ke valuta asing, serta menghitung Faktorial dan deret Fibonacci dengan cepat.
+                </p>
+            </div>
+            <div class="pt-6">
+                <a href="/transform" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl py-3 text-sm shadow-md transition-colors">
+                    Buka Konverter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-6 custom-shadow">
+        <div class="flex items-center justify-between mb-6 border-b border-gray-100 dark:border-slate-700 pb-4">
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white flex items-center space-x-2">
+                <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Aktivitas & Riwayat Kalkulasi Global</span>
+            </h2>
+            {% if session.get('history') %}
+            <form action="/arithmetic/clear-history" method="POST">
+                <button type="submit" class="text-xs text-red-500 hover:text-red-600 font-bold transition-colors">
+                    Hapus Semua Riwayat
+                </button>
+            </form>
+            {% endif %}
+        </div>
+
+        {% if session.get('history') %}
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-[360px] overflow-y-auto pr-1">
+            {% for item in session.get('history')|reverse %}
+            <div class="p-4 rounded-xl border border-gray-100 dark:border-slate-700 bg-gray-50 dark:bg-slate-800/50 hover:border-indigo-300 dark:hover:border-indigo-800 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="px-2 py-0.5 text-[10px] font-bold rounded-md bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-400">
+                            {{ item.category }} - {{ item.operation }}
+                        </span>
+                        <span class="text-[10px] text-gray-400 font-mono">{{ item.timestamp }}</span>
+                    </div>
+                    <div class="text-sm font-semibold text-gray-700 dark:text-slate-300 mt-2 font-mono break-all">
+                        {{ item.expression }}
+                    </div>
+                </div>
+                <div class="text-base font-extrabold text-indigo-600 dark:text-indigo-400 mt-2 break-all font-mono">
+                    = {{ item.result }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-12 space-y-2">
+            <svg class="w-12 h-12 text-gray-300 dark:text-gray-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+            <p class="text-sm text-gray-400 dark:text-gray-500 font-medium">Belum ada riwayat aktivitas. Mulai lakukan perhitungan di atas!</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
