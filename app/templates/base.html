@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,45 +24,62 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
     <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
 </head>
-<body class="bg-gradient-to-tr from-[#F8F8F8] via-[#F2F5F8] to-[#EBF0F5] text-black dark:bg-gradient-to-b dark:from-[#000000] dark:via-[#05050A] dark:to-[#0C0C18] dark:text-[#F5F5F5] min-h-screen flex flex-col antialiased relative">
+
+<body
+    class="bg-gradient-to-tr from-[#F8F8F8] via-[#F2F5F8] to-[#EBF0F5] text-black dark:bg-gradient-to-b dark:from-[#000000] dark:via-[#05050A] dark:to-[#0C0C18] dark:text-[#F5F5F5] min-h-screen flex flex-col antialiased relative">
     <div class="fixed inset-0 pointer-events-none select-none z-0 overflow-hidden">
         <div class="absolute inset-0 dark:hidden">
             <div class="absolute top-10 right-10 md:top-20 md:right-20 text-neutral-200/40 animate-float-slow">
-                <svg class="w-32 h-32 md:w-48 md:h-48" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-32 h-32 md:w-48 md:h-48" fill="none" stroke="currentColor" stroke-width="0.8"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="5" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                 </svg>
             </div>
             <div class="absolute top-24 left-10 md:top-36 md:left-24 text-neutral-200/50 animate-float-slower">
-                <svg class="w-40 h-40 md:w-56 md:h-56" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                <svg class="w-40 h-40 md:w-56 md:h-56" fill="none" stroke="currentColor" stroke-width="0.8"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                 </svg>
             </div>
-            <div class="absolute bottom-20 right-12 md:bottom-32 md:right-32 text-neutral-200/40 hidden md:block animate-float-slow">
-                <svg class="w-36 h-36" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+            <div
+                class="absolute bottom-20 right-12 md:bottom-32 md:right-32 text-neutral-200/40 hidden md:block animate-float-slow">
+                <svg class="w-36 h-36" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                 </svg>
             </div>
             <div class="absolute top-48 right-[25%] text-neutral-300/40 animate-float-slow">
-                <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
                 </svg>
             </div>
             <div class="absolute top-56 right-[22%] text-neutral-300/30 scale-75 animate-float-slower">
-                <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
                 </svg>
             </div>
             <div class="absolute bottom-40 left-16 text-neutral-200/50 animate-float-slow">
-                <svg class="w-16 h-16" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                <svg class="w-16 h-16" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
                 </svg>
             </div>
         </div>
         <div class="absolute inset-0 hidden dark:block">
             <div class="absolute top-10 right-10 md:top-20 md:right-20 text-neutral-900/60 animate-float-slow">
-                <svg class="w-32 h-32 md:w-48 md:h-48" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                <svg class="w-32 h-32 md:w-48 md:h-48" fill="none" stroke="currentColor" stroke-width="0.8"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                 </svg>
             </div>
             <div class="absolute top-24 left-[15%] text-neutral-800/40 animate-twinkle-1">
@@ -90,8 +108,10 @@
                 </svg>
             </div>
             <div class="absolute bottom-16 left-8 md:bottom-24 md:left-16 text-neutral-900/60 animate-float-slower">
-                <svg class="w-40 h-40 md:w-56 md:h-56" fill="none" stroke="currentColor" stroke-width="0.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
+                <svg class="w-40 h-40 md:w-56 md:h-56" fill="none" stroke="currentColor" stroke-width="0.8"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
                     <circle cx="9" cy="11" r="1.5" />
                     <circle cx="15" cy="11" r="1.5" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 13l-1-1.5h2L12 13z" />
@@ -103,68 +123,106 @@
         </div>
     </div>
 
-    <header class="relative z-10 bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
+    <header
+        class="relative z-10 bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-4">
                     <a href="/" class="flex items-center space-x-2">
                         <span class="text-xl font-black tracking-widest uppercase">Kalkulator</span>
-                        <span class="px-2 py-0.5 text-[9px] font-black uppercase tracking-widest bg-black text-white dark:bg-white dark:text-black">NISHRINA</span>
+                        <span
+                            class="px-2 py-0.5 text-[9px] font-black uppercase tracking-widest bg-black text-white dark:bg-white dark:text-black">NISRINA</span>
                     </a>
-                    <div class="hidden sm:flex items-center space-x-2 px-2 py-0.5 border border-neutral-200 dark:border-neutral-800 text-[8px] font-black uppercase tracking-widest text-neutral-400 dark:text-neutral-500 rounded-none bg-neutral-50 dark:bg-neutral-900/50">
+                    <div
+                        class="hidden sm:flex items-center space-x-2 px-2 py-0.5 border border-neutral-200 dark:border-neutral-800 text-[8px] font-black uppercase tracking-widest text-neutral-400 dark:text-neutral-500 rounded-none bg-neutral-50 dark:bg-neutral-900/50">
                         <span class="dark:hidden flex items-center space-x-1.5">
-                            <svg class="w-3.5 h-3.5 text-black animate-float-slow" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="5" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                            <svg class="w-3.5 h-3.5 text-black animate-float-slow" fill="none" stroke="currentColor"
+                                stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="5" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                             </svg>
-                            <svg class="w-3.5 h-3.5 text-neutral-450 animate-float-slower" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            <svg class="w-3.5 h-3.5 text-neutral-450 animate-float-slower" fill="none"
+                                stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                             </svg>
-                            <svg class="w-3.5 h-3.5 text-neutral-600 animate-float-slow" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                            <svg class="w-3.5 h-3.5 text-neutral-600 animate-float-slow" fill="none"
+                                stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
                             </svg>
                         </span>
                         <span class="hidden dark:flex items-center space-x-1.5">
-                            <svg class="w-3.5 h-3.5 text-white animate-float-slow" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            <svg class="w-3.5 h-3.5 text-white animate-float-slow" fill="none" stroke="currentColor"
+                                stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                             </svg>
-                            <svg class="w-3.5 h-3.5 text-yellow-350 animate-twinkle-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-3.5 h-3.5 text-yellow-350 animate-twinkle-1" fill="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
                             </svg>
-                            <svg class="w-3.5 h-3.5 text-neutral-450 animate-float-slower" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" /><circle cx="9" cy="11" r="1.5" /><circle cx="15" cy="11" r="1.5" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 13l-1-1.5h2L12 13z" /><path stroke-linecap="round" d="M6 20h12" />
+                            <svg class="w-3.5 h-3.5 text-neutral-450 animate-float-slower" fill="none"
+                                stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
+                                <circle cx="9" cy="11" r="1.5" />
+                                <circle cx="15" cy="11" r="1.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 13l-1-1.5h2L12 13z" />
+                                <path stroke-linecap="round" d="M6 20h12" />
                             </svg>
                         </span>
                     </div>
                 </div>
                 <nav class="hidden md:flex items-center space-x-6">
-                    <a href="/arithmetic" class="text-xs font-bold tracking-widest uppercase pb-1 border-b-2 transition-all {% if request.path == '/arithmetic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-black/30 dark:hover:border-white/30{% endif %}">Aritmatika</a>
-                    <a href="/logic" class="text-xs font-bold tracking-widest uppercase pb-1 border-b-2 transition-all {% if request.path == '/logic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-black/30 dark:hover:border-white/30{% endif %}">Logika</a>
-                    <a href="/transform" class="text-xs font-bold tracking-widest uppercase pb-1 border-b-2 transition-all {% if request.path == '/transform' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-black/30 dark:hover:border-white/30{% endif %}">Transformasi</a>
+                    <a href="/arithmetic"
+                        class="text-xs font-bold tracking-widest uppercase pb-1 border-b-2 transition-all {% if request.path == '/arithmetic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-black/30 dark:hover:border-white/30{% endif %}">Aritmatika</a>
+                    <a href="/logic"
+                        class="text-xs font-bold tracking-widest uppercase pb-1 border-b-2 transition-all {% if request.path == '/logic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-black/30 dark:hover:border-white/30{% endif %}">Logika</a>
+                    <a href="/transform"
+                        class="text-xs font-bold tracking-widest uppercase pb-1 border-b-2 transition-all {% if request.path == '/transform' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white hover:border-black/30 dark:hover:border-white/30{% endif %}">Transformasi</a>
                 </nav>
                 <div class="flex items-center space-x-2">
-                    <button id="theme-toggle" class="flex items-center space-x-2 px-3 py-1.5 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-850 border border-neutral-200 dark:border-neutral-800 rounded-none transition-all">
+                    <button id="theme-toggle"
+                        class="flex items-center space-x-2 px-3 py-1.5 bg-neutral-50 hover:bg-neutral-100 dark:bg-neutral-900 dark:hover:bg-neutral-850 border border-neutral-200 dark:border-neutral-800 rounded-none transition-all">
                         <div id="theme-scene-light" class="flex items-center space-x-2 text-black">
-                            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="12" cy="12" r="5" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                             </svg>
-                            <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                            <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                             </svg>
-                            <svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
+                            <svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
                             </svg>
                         </div>
                         <div id="theme-scene-dark" class="hidden flex items-center space-x-2 text-white">
-                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                             </svg>
-                            <svg class="w-4 h-4 text-yellow-350" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-4 h-4 text-yellow-350" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
-                                <path d="M19 14l0.5 1.5 1.5 0.5-1.5 0.5-0.5 1.5-0.5-1.5-1.5-0.5 1.5-0.5 0.5-1.5z" opacity="0.7" />
+                                <path d="M19 14l0.5 1.5 1.5 0.5-1.5 0.5-0.5 1.5-0.5-1.5-1.5-0.5 1.5-0.5 0.5-1.5z"
+                                    opacity="0.7" />
                             </svg>
-                            <svg class="w-4 h-4 text-neutral-450" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
+                            <svg class="w-4 h-4 text-neutral-450" fill="none" stroke="currentColor" stroke-width="1.8"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
                                 <circle cx="9" cy="11" r="1.5" />
                                 <circle cx="15" cy="11" r="1.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 13l-1-1.5h2L12 13z" />
@@ -172,110 +230,84 @@
                             </svg>
                         </div>
                     </button>
-                    <button id="mobile-menu-btn" class="p-2 text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-none md:hidden transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-700">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <button id="mobile-menu-btn"
+                        class="p-2 text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-none md:hidden transition-colors border border-transparent hover:border-neutral-200 dark:hover:border-neutral-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#121212] border-t border-gray-200 dark:border-neutral-800 px-4 py-3 space-y-1">
-            <a href="/arithmetic" class="block py-2 text-xs font-bold tracking-widest uppercase px-3 rounded-none {% if request.path == '/arithmetic' %}bg-black text-white dark:bg-white dark:text-black{% else %}text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800{% endif %}">Aritmatika</a>
-            <a href="/logic" class="block py-2 text-xs font-bold tracking-widest uppercase px-3 rounded-none {% if request.path == '/logic' %}bg-black text-white dark:bg-white dark:text-black{% else %}text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800{% endif %}">Logika</a>
-            <a href="/transform" class="block py-2 text-xs font-bold tracking-widest uppercase px-3 rounded-none {% if request.path == '/transform' %}bg-black text-white dark:bg-white dark:text-black{% else %}text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800{% endif %}">Transformasi</a>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-[#121212] border-t border-gray-200 dark:border-neutral-800 px-4 py-3 space-y-1">
+            <a href="/arithmetic"
+                class="block py-2 text-xs font-bold tracking-widest uppercase px-3 rounded-none {% if request.path == '/arithmetic' %}bg-black text-white dark:bg-white dark:text-black{% else %}text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800{% endif %}">Aritmatika</a>
+            <a href="/logic"
+                class="block py-2 text-xs font-bold tracking-widest uppercase px-3 rounded-none {% if request.path == '/logic' %}bg-black text-white dark:bg-white dark:text-black{% else %}text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800{% endif %}">Logika</a>
+            <a href="/transform"
+                class="block py-2 text-xs font-bold tracking-widest uppercase px-3 rounded-none {% if request.path == '/transform' %}bg-black text-white dark:bg-white dark:text-black{% else %}text-neutral-600 hover:bg-gray-100 dark:text-neutral-300 dark:hover:bg-neutral-800{% endif %}">Transformasi</a>
         </div>
     </header>
 
-    <div class="relative z-10 bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 md:hidden overflow-x-auto no-scrollbar scroll-smooth whitespace-nowrap">
+    <div
+        class="relative z-10 bg-white dark:bg-[#121212] border-b border-gray-200 dark:border-neutral-800 md:hidden overflow-x-auto no-scrollbar scroll-smooth whitespace-nowrap">
         <div class="max-w-7xl mx-auto px-4 flex space-x-6 w-max min-w-full">
-            <a href="/arithmetic" class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/arithmetic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Aritmatika</a>
-            <a href="/logic" class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/logic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Logika</a>
-            <a href="/transform" class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/transform' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Transformasi</a>
+            <a href="/arithmetic"
+                class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/arithmetic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Aritmatika</a>
+            <a href="/logic"
+                class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/logic' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Logika</a>
+            <a href="/transform"
+                class="py-3 px-1 border-b-2 font-black text-xs uppercase tracking-wider transition-all inline-block {% if request.path == '/transform' %}border-black text-black dark:border-white dark:text-white{% else %}border-transparent text-neutral-400 dark:text-neutral-500{% endif %}">Transformasi</a>
         </div>
     </div>
 
     <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                <div class="mb-6 space-y-4">
-                    {% for category, message in messages %}
-                        <div class="p-4 rounded-none flex items-center justify-between {% if category == 'error' %}bg-[#FFF0F0] text-[#C70000] border-l-4 border-[#C70000] dark:bg-[#2A0000] dark:text-[#FF8888]{% else %}bg-[#F0FFF4] text-[#00805A] border-l-4 border-[#00805A] dark:bg-[#002A1A] dark:text-[#88FFAA]{% endif %}" role="alert">
-                            <div class="flex items-center space-x-2">
-                                {% if category == 'error' %}
-                                    <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
-                                {% else %}
-                                    <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                {% endif %}
-                                <span class="text-xs font-bold uppercase tracking-wider">{{ message }}</span>
-                            </div>
-                            <button class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors" onclick="this.parentElement.remove()">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                            </button>
-                        </div>
-                    {% endfor %}
+        {% if messages %}
+        <div class="mb-6 space-y-4">
+            {% for category, message in messages %}
+            <div class="p-4 rounded-none flex items-center justify-between {% if category == 'error' %}bg-[#FFF0F0] text-[#C70000] border-l-4 border-[#C70000] dark:bg-[#2A0000] dark:text-[#FF8888]{% else %}bg-[#F0FFF4] text-[#00805A] border-l-4 border-[#00805A] dark:bg-[#002A1A] dark:text-[#88FFAA]{% endif %}"
+                role="alert">
+                <div class="flex items-center space-x-2">
+                    {% if category == 'error' %}
+                    <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    {% else %}
+                    <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    {% endif %}
+                    <span class="text-xs font-bold uppercase tracking-wider">{{ message }}</span>
                 </div>
-            {% endif %}
+                <button class="text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+                    onclick="this.parentElement.remove()">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
         {% endwith %}
 
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="relative z-10 bg-white dark:bg-[#121212] border-t border-gray-200 dark:border-neutral-800 py-8 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center space-y-6">
-            <div class="w-full max-w-md border-b border-neutral-200 dark:border-neutral-800 pb-6 flex justify-center">
-                <div class="dark:hidden flex items-center space-x-6 text-black">
-                    <div class="flex flex-col items-center space-y-1">
-                        <svg class="w-10 h-10 text-black animate-float-slow" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                        </svg>
-                        <span class="text-[8px] font-black uppercase tracking-widest text-neutral-400">Siang</span>
-                    </div>
-                    <div class="h-8 w-px bg-neutral-200"></div>
-                    <div class="flex flex-col items-center space-y-1">
-                        <svg class="w-10 h-10 text-neutral-500 animate-float-slower" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                        </svg>
-                        <span class="text-[8px] font-black uppercase tracking-widest text-neutral-400">Awan</span>
-                    </div>
-                    <div class="h-8 w-px bg-neutral-200"></div>
-                    <div class="flex flex-col items-center space-y-1">
-                        <svg class="w-10 h-10 text-neutral-600 animate-float-slow" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5c3-3 6.5-1 9 2.5 2.5-3.5 6-5.5 9-2.5M7 11.5c1.5 2 3.5 3 5 3M12 14.5v-3.5" />
-                        </svg>
-                        <span class="text-[8px] font-black uppercase tracking-widest text-neutral-400">Burung</span>
-                    </div>
-                </div>
-                <div class="hidden dark:flex items-center space-x-6 text-white">
-                    <div class="flex flex-col items-center space-y-1">
-                        <svg class="w-10 h-10 text-white animate-float-slow" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
-                        <span class="text-[8px] font-black uppercase tracking-widest text-neutral-500">Bulan</span>
-                    </div>
-                    <div class="h-8 w-px bg-neutral-800"></div>
-                    <div class="flex flex-col items-center space-y-1">
-                        <svg class="w-10 h-10 text-yellow-350 animate-twinkle-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z" />
-                        </svg>
-                        <span class="text-[8px] font-black uppercase tracking-widest text-neutral-500">Bintang</span>
-                    </div>
-                    <div class="h-8 w-px bg-neutral-800"></div>
-                    <div class="flex flex-col items-center space-y-1">
-                        <svg class="w-10 h-10 text-neutral-450 animate-float-slower" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 22c4.418 0 8-3.582 8-8V8a2 2 0 00-2-2h-1.5C15 6 14 5 12 3c-2 2-3 3-4.5 3H6a2 2 0 00-2 2v6c0 4.418 3.582 8 8 8z" />
-                            <circle cx="9" cy="11" r="1.5" />
-                            <circle cx="15" cy="11" r="1.5" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 13l-1-1.5h2L12 13z" />
-                            <path stroke-linecap="round" d="M6 20h12" />
-                        </svg>
-                        <span class="text-[8px] font-black uppercase tracking-widest text-neutral-500">Owl</span>
-                    </div>
-                </div>
-            </div>
-            <div class="text-[10px] font-bold tracking-widest text-neutral-400 dark:text-neutral-500 uppercase text-center">
-                &copy; 2026 Kalkulator NISRINA
-            </div>
-        </div>
+    <div class="text-[10px] font-bold tracking-widest text-neutral-400 dark:text-neutral-500 uppercase text-center">
+        &copy; 2026 Kalkulator NISRINA
+    </div>
+    </div>
     </footer>
 
     <script>
@@ -288,4 +320,5 @@
         }
     </script>
 </body>
+
 </html>
